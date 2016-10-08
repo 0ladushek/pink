@@ -97,4 +97,4 @@ gulp.task('copyjs', function() {
 });
 gulp.task('default', ['style','watcher', 'browserSync']);
 
-gulp.task('build', ['copyimg', 'copyhtml', 'copyjs', 'style','mincss','imagemin']);
+gulp.task('build', ['copyhtml', 'copyjs', 'style','mincss','imagemin']);
