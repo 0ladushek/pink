@@ -1,0 +1,86 @@
+.download {
+  
+  &__promo-text {
+    display: none;
+    padding: 20px 0;
+    margin: 0 auto 370px;
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: @font-size--320-h1;
+    font-weight: @light;
+    
+    @media(min-width: @screen--small) {
+      margin: 0 auto;
+      padding: 0 40px 40px;
+      font-size: @font-size--700-h1;
+      display: block;
+    }
+    
+    @media(min-width: @screen--medium) {
+      font-size: @font-size--1200-h1;
+    }
+  }
+  
+  &__os-list {
+    height: 120px;
+    padding: 0;
+    margin: 10px auto 0;
+    list-style: none;
+    line-height: 120px;
+    
+    li {
+      width: 50px;
+      margin: 0 30px 0 0;
+      display: inline-block;
+      vertical-align: middle;
+    }
+    
+    .logo-os {
+      display: block;
+      .hidden-text;
+      
+      &--apple {
+        height: 57px;
+        background: url("../img/apple-logo.svg") no-repeat scroll 0 0;
+      }
+      
+      &--android {
+        height: 47px;
+        background: url("../img/android-logo.svg") no-repeat scroll 4px 0;
+      }
+      
+      &--windows {
+        height: 42px;
+        background: url("../img/microsoft-logo.svg") no-repeat scroll 3px 0;
+      }
+    }
+  }
+  
+  &__os-list {
+    li {
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+  
+  &__options {
+    padding: 0 40px 35px;
+    margin: 0 auto;
+    color: #fff;
+    font-weight: @light;
+    text-align: center;
+    
+    @media(min-width: @screen--small) {
+      padding: 0;
+      font-weight: @light;
+      font-size: @font-size--700-h4;
+    }
+    
+    @media(min-width: @screen--medium) {
+      padding: 0 40px;
+      font-size: @font-size--1200;
+    }
+  }
+}
