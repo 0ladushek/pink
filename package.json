@@ -1,0 +1,22 @@
+{
+  "name": "pink",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/zer1/pink.git"
+  },
+  "author": "Albert M.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zer1/pink/issues"
+  },
+  "homepage": "https://github.com/zer1/pink#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
