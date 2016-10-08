@@ -80,11 +80,11 @@ gulp.task('imagemin', () =>
         .pipe(imagemin())
         .pipe(gulp.dest('public/images'))
 );
-gulp.task('copyimg', function() {
-    gulp.src('./dev/img/*')
-        .pipe(copy())
-        .pipe(gulp.dest('public/img'));
-      });
+// gulp.task('copyimg', function() {
+//     gulp.src('./dev/img/*')
+//         .pipe(copy())
+//         .pipe(gulp.dest('public/img'));
+//       });
 gulp.task('copyhtml', function() {
     gulp.src('./dev/*.html')
         .pipe(copy())
