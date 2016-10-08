@@ -90,6 +90,11 @@ gulp.task('copyhtml', function() {
         .pipe(copy())
         .pipe(gulp.dest('public/'));
 });
+gulp.task('copyjs', function() {
+    gulp.src('./dev/js/*.js')
+        .pipe(copy())
+        .pipe(gulp.dest('public/js/*.js'));
+});
 gulp.task('default', ['style','watcher', 'browserSync']);
 
-gulp.task('build', ['copyimg', 'copyhtml', 'style','mincss','imagemin']);
+gulp.task('build', ['copyimg', 'copyhtml', 'copyjs', 'style','mincss','imagemin']);
