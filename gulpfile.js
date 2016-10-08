@@ -78,7 +78,7 @@ gulp.task('mincss', function() {
 gulp.task('imagemin', () =>
     gulp.src('./dev/img/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('dist/images'))
+        .pipe(gulp.dest('public/images'))
 );
 gulp.task('copyimg', function() {
     gulp.src('./dev/img/*')
