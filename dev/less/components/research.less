@@ -1,0 +1,105 @@
+.research {
+  display: none;
+  
+  @media(min-width: @screen--small) {
+    display: block;
+  }
+  
+  @media(min-width: @screen--medium) {
+    background: @grey;
+  }
+  
+  &__inner {
+    width: @screen--small;
+    padding: 60px 0 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    
+    @media(min-width: @screen--medium) {
+      width: @screen--medium;
+      background: @grey;
+      padding: 60px 0 70px;
+    }
+    
+    @media(min-width: @screen--big) {
+      width: @screen--big;
+      padding: 60px 80px 70px;
+    }
+  }
+  
+  &__inner:before {
+    width: 262px;
+    height: 302px;
+    margin: 0 60px 0 20px;
+    display: block;
+    background: url("../img/timer-2.svg") no-repeat scroll;
+    content: "";
+    
+    @media(min-width: @screen--medium) {
+      margin: 0 90px 0 170px;
+    }
+    
+    @media(min-width: @screen--big) {
+      margin: 0 90px 0 200px;
+    }
+  }
+  
+  &__inner:after {
+    width: 210px;
+    height: 210px;
+    position: absolute;
+    top: 126px;
+    left: 45px;
+    content: "24";
+    color: @pink;
+    font-size: 105px;
+    font-weight: @bold;
+    text-align: center;
+    line-height: 180px;
+    border: 10px solid @pink;
+    border-radius: 50%;
+    
+    @media(min-width: @screen--medium) {
+      top: 126px;
+      left: 195px;
+    }
+    
+    @media(min-width: @screen--big) {
+      left: 305px;
+    }
+  }
+  
+  &__item {
+    width: 310px;
+    padding: 30px 0 0;
+    margin: 20px 0;
+    text-align: left;
+    
+    @media(min-width: @screen--medium) {
+      width: 520px;
+    }
+  }
+  
+  &__h2 {
+    width: 170px;
+    margin: 0;
+    color: #000;
+    font-size: @font-size--700-h2;
+    font-weight: @bold;
+    font-family: @font-family;
+    
+    @media(min-width: @screen--medium) {
+      width: 300px;
+    }
+  }
+  
+  &__text {
+    line-height: @line-height--320;
+  }
+  
+  &__link {
+    color: @pink;
+  }
+}
