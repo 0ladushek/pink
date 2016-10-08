@@ -1,0 +1,44 @@
+.hidden-text {
+  border: 0;
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+.slider-style {
+  width: 200px;
+  height: 10px;
+  margin: 0 0 0 -100px;
+  position: absolute;
+  left: 50%;
+  text-align: center;
+}
+
+.slider-hide-radio {
+  position: absolute;
+  opacity: 0;
+}
+
+.slider-style__btn {
+  width: 6px;
+  height: 6px;
+  margin: 0 3px;
+  display: inline-block;
+  background: @grey--medium;
+  border: 3px solid transparent;
+  vertical-align: top;
+  border-radius: 50%;
+  cursor: pointer;
+  box-sizing: content-box;
+  background-clip: padding-box;
+  
+  &:hover {
+    background: @grey--dark;
+    background-clip: padding-box;
+  }
+}
+
+.slider-style__btn--active {
+  border: 3px solid @blue;
+  background: transparent;
+}
