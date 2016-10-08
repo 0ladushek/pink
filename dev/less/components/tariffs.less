@@ -1,0 +1,227 @@
+.tariffs {
+  background: @grey;
+  &__inner {
+    min-width: @screen--mobile;
+    margin: 0 auto;
+    position: relative;
+    
+    @media(min-width: @screen--small) {
+      width: @screen--small;
+      padding: 0 0 70px;
+    }
+    @media(min-width: @screen--medium) {
+      width: @screen--medium;
+    }
+    @media(min-width: @screen--big) {
+      width: @screen--big;
+    }
+    
+    .slider-pagination {
+      background: @grey;
+      
+      @media(min-width: @screen--small) {
+        display: none;
+      }
+    }
+    
+    & input[type=radio] {
+      .slider-hide-radio;
+    }
+  }
+  
+  &__table-wrap {
+    overflow: hidden;
+  }
+  
+  &__table {
+    min-width: 265%;
+    margin: 0;
+    border-collapse: collapse;
+    margin: 20px 0 70px 0;
+    transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+    
+    @media(min-width: @screen--small) {
+      min-width: 600px;
+      margin: 0 auto;
+    }
+  }
+  
+  &__table td {
+    border: 2px solid (@grey - #0d0d0d);
+    background: #fff;
+  }
+  &__col-1 {
+    display: none;
+    
+    @media(min-width: @screen--small) {
+      width: 153px;
+      padding: 15px;
+      display: table-cell;
+      text-align: left;
+    }
+    @media(min-width: @screen--medium) {
+      width: 233px;
+      padding: 20px;
+    }
+  }
+  
+  &__col-2,
+  &__col-3,
+  &__col-4 {
+    width: 280px;
+    
+    @media(min-width: @screen--small) {
+      width: 153px;
+    }
+    @media(min-width: @screen--medium) {
+      width: 230px;
+    }
+  }
+  
+  &__row-1 &__col-1 {
+    @media(min-width: @screen--small) {
+      background: @grey;
+      border: transparent;
+    }
+  }
+  
+  &__row-1 td {
+    background: @blue;
+    padding: 20px;
+  }
+  
+  &__buy {
+    position: relative;
+  }
+  
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  &__ribbon {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    overflow: hidden;
+    margin: 0;
+    width: 61px;
+    height: 61px;
+    
+    @media(min-width: @screen--medium) {
+      width: 81px;
+      height: 81px;
+    }
+    
+    & span {
+      width: 120px;
+      padding: 5px;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      background-color: @pink;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      transform: rotate(-45deg) translateX(-10px) translateY(-40px);
+      transform-origin: 0 0;
+      
+      @media(min-width: @screen--medium) {
+        top: 80px;
+        left: 10px;
+      }
+    }
+  }
+  
+  &__name {
+    text-align: center;
+    display: block;
+    font-size: @font-size--320-h2;
+    font-weight: @bold;
+    color: #fff;
+    text-transform: uppercase;
+    
+    @media(min-width: @screen--small) {
+      font-size: @font-size--700-h5;
+    }
+    @media(min-width: @screen--medium) {
+      font-size: @font-size--1200;
+    }
+  }
+  
+  &__price {
+    text-align: center;
+    display: block;
+    font-size: @font-size--320-h1;
+    font-weight: @light;
+    color: #fff;
+    
+    @media(min-width: @screen--small) {
+      font-size: @font-size--700-h4;
+    }
+    @media(min-width: @screen--medium) {
+      font-size: @font-size--1200-h3;
+    }
+  }
+  
+  .icon {
+    width: 30px;
+    height: 26px;
+    margin: 15px 15%;
+    display: block;
+    .hidden-text;
+    
+    @media(min-width: @screen--small) {
+      margin: auto;
+    }
+  }
+}
+
+.package-option {
+  display: none;
+  
+  @media(min-width: @screen--small) {
+    display: block;
+  }
+  
+  &--320 {
+    display: block;
+    padding: 0 0 0 15%;
+    @media(min-width: @screen--small) {
+      display: none;
+    }
+  }
+}
+
+.tariffs-paginator {
+  .slider-style;
+  bottom: 30px;
+  
+  @media(min-width: @screen--small) {
+    display: none;
+  }
+  & label {
+    .slider-style__btn;
+  }
+}
+
+#btn-11:checked ~ .tariffs-paginator label[for="btn-11"],
+#btn-22:checked ~ .tariffs-paginator label[for="btn-22"],
+#btn-33:checked ~ .tariffs-paginator label[for="btn-33"] {
+  .slider-style__btn--active;
+}
+
+#btn-11:checked ~ .tariffs__table-wrap .tariffs__table {
+  transform: translateX(0);
+}
+
+#btn-22:checked ~ .tariffs__table-wrap .tariffs__table {
+  transform: translateX(-32%);
+}
+
+#btn-33:checked ~ .tariffs__table-wrap .tariffs__table {
+  transform: translateX(-60%);
+}
