@@ -93,7 +93,7 @@ gulp.task('copyhtml', function() {
 gulp.task('copyjs', function() {
     gulp.src('./dev/js/*.js')
         .pipe(copy())
-        .pipe(gulp.dest('public/js/*.js'));
+        .pipe(gulp.dest('public/js'));
 });
 gulp.task('default', ['style','watcher', 'browserSync']);
 
