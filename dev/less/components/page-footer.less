@@ -1,0 +1,242 @@
+.page-footer {
+  position: relative;
+  
+  &__inner {
+    min-width: @screen--mobile;
+    padding: 0;
+    margin: 0 auto;
+    
+    @media(min-width: @screen--small) {
+      width: @screen--small;
+    }
+    
+    @media(min-width: @screen--medium) {
+      width: @screen--medium;
+    }
+    
+    @media(min-width: @screen--big) {
+      width: @screen--big;
+    }
+  }
+  
+  &__h1 {
+    margin: 70px auto 40px;
+    font-size: @font-size--320-h1;
+    font-weight: @light;
+    text-align: center;
+    font-family: @font-family;
+    color: @blue;
+    
+    @media(min-width: @screen--small) {
+      font-size: @font-size--700-h1;
+    }
+    
+    @media(min-width: @screen--medium) {
+      font-size: @font-size--1200-h1;
+    }
+  }
+  
+  &__contacts-wrap {    
+    @media(min-width: @screen--small) {
+      width: 500px;
+      padding: 0;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      
+      @media(min-width: @screen--medium) {
+        width: 820px;
+      }
+    }
+  }
+  
+  &__contacts {
+    width: 87%;
+    margin: 0 auto 25px;
+    text-align: center;
+    
+    @media(min-width: @screen--small) {
+      width: 200px;
+    }
+    
+    @media(min-width: @screen--medium) {
+      width: 270px;
+    }
+    
+    &:first-child {
+      order: 1;
+    }
+    
+    &:nth-child(2) {
+      order: 2;
+      
+      @media(min-width: @screen--medium) {
+        order: 3;
+      }
+    }
+    
+    &:last-child {
+      margin: 0 auto 40px;
+      order: 3;
+      
+      @media(min-width: @screen--small) {
+        width: 280px;
+      }
+      
+      @media(min-width: @screen--medium) {
+        order: 2;
+      }
+    }
+  }
+  
+  &__contacts a:hover {
+    text-decoration: underline;
+    color: @blue;
+  }
+  
+  &__contacts a:active {
+    text-decoration: underline;
+    color: @grey--medium;
+  }
+  
+  &__h2 {
+    margin: 0 auto 10px;
+    font-family: @font-family;
+    font-size: @font-size--320-h2;
+    font-weight: @bold;
+  }
+  
+  &__text {
+    margin: 0;
+    text-decoration: none;
+    font-size: @font-size--320-h1;
+    font-weight: @light;
+    color: @pink;
+  }
+  
+  &__low {
+    display: none;
+    
+    @media(min-width: @screen--small) {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  }
+  
+  &__logo-link {    
+    @media(min-width: @screen--small) {
+      width: 145px;
+      height: 40px;
+      margin: 40px 0;
+      display: block;
+      .hidden-text;
+      background: url("../img/Pink-logo-footer-2@1x.png") no-repeat scroll 50% 50%;
+      &:hover {
+        background: url("../img/Pink-logo-footer-2@1x--hvr.png") no-repeat scroll 50% 50%;
+      }
+    }
+    
+    @media(min-width: @screen--medium) {
+      margin: 77px 0;
+      background: url("../img/Pink-logo-footer-3@1x.png") no-repeat scroll 50% 50%;
+      
+      &:hover {
+        background: url("../img/Pink-logo-footer-3@1x--hvr.png") no-repeat scroll 50% 50%;
+      }
+    }
+    
+    &:active {
+      opacity: .3;
+    }
+  }
+  
+  &__social {    
+    @media(min-width: @screen--small) {
+      display: flex;
+    }
+  }
+  
+  &__icon {    
+    @media(min-width: @screen--small) {
+      width: 46px;
+      height: 45px;
+      margin: 0 10px;
+      display: block;
+      .hidden-text;
+      border-radius: 50%;
+      border: 2px solid @grey--light;
+      
+      &:hover {
+        border: 2px solid @blue;
+      }
+    }
+  }
+  
+  &__design {    
+    @media(min-width: @screen--small) {
+      display: flex;
+      align-items: center;
+    }
+  }
+  
+  &__credit {    
+    @media(min-width: @screen--small) {
+      width: 27px;
+      height: 33px;
+      margin: 0 10px;
+      display: block;
+      .hidden-text;
+    }
+  }
+}
+
+#map {
+  height: 200px;
+  margin: 0 auto;
+  background: url("../img/map--320.jpg") no-repeat scroll 50%;
+  z-index: 0;
+  
+  @media(min-width: @screen--small) {
+    height: 375px;
+    margin: 0 auto;
+    background: url("../img/map--700.jpg") no-repeat scroll 50% 50%;
+  }
+  
+  @media(min-width: @screen--medium) {
+    height: 525px;
+    margin: 0 auto;
+    background: url("../img/map--1200.jpg") no-repeat scroll 50% 50%;
+  }
+  
+  @media(min-width: @screen--big) {
+    height: 525px;
+    margin: 0 auto;
+    background: url("../img/map--1440.jpg") no-repeat scroll 50% 50%;
+  }
+}
+
+.google-map:before {
+  width: 100%;
+  height: 30px;
+  z-index: 1;
+  position: absolute;
+  background: url("../img/map-arrow.svg") no-repeat 50% 50%;
+  background-size: 100% 100%;
+  content: "";
+  
+  @media(min-width: @screen--small) {
+    height: 60px;
+  }
+  
+  @media(min-width: @screen--medium) {
+    height: 90px;
+  }
+  
+  @media(min-width: @screen--big) {
+    height: 110px;
+  }
+}

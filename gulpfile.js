@@ -11,26 +11,30 @@ var copy = require('gulp-contrib-copy');
 var cleanCSS = require('gulp-clean-css');
 const imagemin = require('gulp-imagemin');
 
-var paths = {
-	html:['./dev/*.html'],
-	css:['./dev/less/**/*.less']
-	// script:['./dev/']
-}
+// var paths = {
+// 	html:['./dev/*.html'],
+// 	css:['./dev/less/**/*.less']
+// 	// script:['./dev/']
+// }
 
 
 
 //=========================================
 
-gulp.task('less', function () {
-  return gulp.src('./dev/less/**/*.less')
-  	.pipe(plumber())
-  	.pipe(sourcemaps.init())
-    .pipe(less({
-      plugins: [autoprefix],
-      paths: [ './dev/style.less']
-    }))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./dev/css'))
+gulp.task("style", function() {
+  gulp.src("dev/less/style.less")
+    .pipe(plumber())
+    .pipe(less())
+    // .pipe(postcss([
+    //   autoprefixer({browsers: [
+    //     "last 1 version",
+    //     "last 2 Chrome versions",
+    //     "last 2 Firefox versions",
+    //     "last 2 Opera versions",
+    //     "last 2 Edge versions"
+    //   ]})
+    // ]))
+    .pipe(gulp.dest("./dev/css"))
     .pipe(reload({stream:true}));
 });
 
@@ -49,8 +53,8 @@ gulp.task('html', function(){
 })
 
 gulp.task('watcher',function(){
-	gulp.watch(paths.css, ['less']);
-	gulp.watch(paths.html, ['html']);
+	gulp.watch('./dev/less/**/*.less', ['style']);
+	gulp.watch('./dev/*.html', ['html']);
 })
 
 gulp.task('browserSync', function() {
@@ -86,6 +90,6 @@ gulp.task('copyhtml', function() {
         .pipe(copy())
         .pipe(gulp.dest('public/'));
 });
-gulp.task('default', ['watcher', 'browserSync']);
+gulp.task('default', ['style','watcher', 'browserSync']);
 
-gulp.task('build', ['copyimg', 'copyhtml', 'less','mincss','imagemin']);
+gulp.task('build', ['copyimg', 'copyhtml', 'style','mincss','imagemin']);
